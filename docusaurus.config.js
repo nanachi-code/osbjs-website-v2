@@ -15,7 +15,7 @@ const config = {
 	favicon: 'img/favicon.ico',
 	organizationName: 'osbjs', // Usually your GitHub org/user name.
 	projectName: 'osbjs-website-v2', // Usually your repo name.
-	staticDirectories: ['public', 'static'],
+	staticDirectories: ['static'],
 
 	presets: [
 		[
