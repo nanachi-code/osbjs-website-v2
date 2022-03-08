@@ -1,7 +1,6 @@
 {
-  "name": "osbjs-website-v-2",
+  "name": "osbjs-website-v2",
   "version": "1.0.0",
-  "private": false,
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
