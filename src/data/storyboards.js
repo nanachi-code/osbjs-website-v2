@@ -3,7 +3,7 @@
  */
 export const storyboards = [
 	{
-		thumbnail: require('./thumbnails/pcedy-ayate.jpg').default,
+		thumbnail: '/thumbnails/pcedy-ayate.jpg',
 		song: 'Phải Chăng Em Đã Yêu?',
 		artist: 'Juky San feat. RedT',
 		mapHost: {
@@ -18,7 +18,7 @@ export const storyboards = [
 		sourceCodeLink: 'https://github.com/nanachi-code/phai-chang-em-da-yeu',
 	},
 	{
-		thumbnail: require('./thumbnails/watch-blue-nagaraia.jpg').default,
+		thumbnail: '/thumbnails/watch-blue-nagaraia.jpg',
 		song: 'Watch blue',
 		artist: 'culenasm',
 		mapHost: {
@@ -33,7 +33,7 @@ export const storyboards = [
 		sourceCodeLink: 'https://github.com/nanachi-code/watch-blue',
 	},
 	{
-		thumbnail: require('./thumbnails/time-fluc-nagaraia.jpg').default,
+		thumbnail: '/thumbnails/time-fluc-nagaraia.jpg',
 		song: 'Time Fluctuation',
 		artist: 'Itsue',
 		mapHost: {
