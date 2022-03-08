@@ -4,16 +4,19 @@ title: Expressions
 
 # Expressions
 
-An expression is a reusable function that takes a `Sprite`/`Animation`/`Loop` group/`Trigger` group(or `Commandable` in short) and performs a predefined task, which will make your code much more cleaner. The good thing is, you can define your own expressions (and it's recommended to do so) and reuse across components.
+An expression is a reusable function that takes a `Sprite`/`Animation`(or `Commandable` in short) and performs a predefined task, which will make your code much more cleaner. The good thing is, you can define your own expressions (and it's recommended to do so) and reuse across components.
 Example:
 ```js
+// highlight-start
 function rotateWhileMovingUp(sprite, startTime, endTime, originY, offset, angle) {
 	sprite.MoveY(startTime, endTime, originY, originY + offset)
 	sprite.Rotate(startTime, endTime, 0, angle)
 }
+// highlight-end
 
 const sprite = new Sprite("sb/bg.jpg")
 // call it
+// highlight-next-line
 rotateWhileMovingUp(sprite, 0, 1000, 240, 50, Math.PI / 2)
 ```
 
@@ -31,7 +34,7 @@ function wiggleXY(
 )
 ```
 Randomly shakes (wiggles) the position around an origin.
-* **commandable**: `Sprite`/`Animation`/`Loop` group/`Trigger` group
+* **commandable**: [`Sprite`](/docs/api/core/sprite)/[`Animation`](/docs/api/core/animation)
 * **frequency**: amount of wiggles per second
 * **amplitude**: the maximum distance from the origin
 * **startTime**: start time of the expression
@@ -50,7 +53,7 @@ function wiggleX(
 )
 ```
 Randomly shakes (wiggles) the position on the x axis around an origin.
-* **commandable**: `Sprite`/`Animation`/`Loop` group/`Trigger` group
+* **commandable**: [`Sprite`](/docs/api/core/sprite)/[`Animation`](/docs/api/core/animation)
 * **frequency**: amount of wiggles per second
 * **amplitude**: the maximum distance from the origin
 * **startTime**: start time of the expression
@@ -69,7 +72,7 @@ function wiggleY(
 )
 ```
 Randomly shakes (wiggles) the position on the y axis around an origin.
-* **commandable**: `Sprite`/`Animation`/`Loop` group/`Trigger` group
+* **commandable**: [`Sprite`](/docs/api/core/sprite)/[`Animation`](/docs/api/core/animation)
 * **frequency**: amount of wiggles per second
 * **amplitude**: the maximum distance from the origin
 * **startTime**: start time of the expression
@@ -88,7 +91,7 @@ function wiggleRotation(
 )
 ```
 Randomly rotates around an "origin" angle.
-* **commandable**: `Sprite`/`Animation`/`Loop` group/`Trigger` group
+* **commandable**: [`Sprite`](/docs/api/core/sprite)/[`Animation`](/docs/api/core/animation)
 * **frequency**: amount of wiggles per second
 * **amplitude**: the maximum angle from the origin
 * **startTime**: start time of the expression
@@ -108,7 +111,7 @@ function wiggleColor(
 ) 
 ```
 Randomly "wiggle" between 2 colors.
-* **commandable**: `Sprite`/`Animation`/`Loop` group/`Trigger` group
+* **commandable**: [`Sprite`](/docs/api/core/sprite)/[`Animation`](/docs/api/core/animation)
 * **frequency**: amount of wiggles per second
 * **amplitude**: the maximum value the sprite's r, g, b values can be starting from the "origin".
 * **startTime**: start time of the expression

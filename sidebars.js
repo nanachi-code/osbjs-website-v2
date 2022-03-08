@@ -24,6 +24,61 @@ const sidebars = {
 			label: 'Guides',
 			items: ['guides/create-first-sb', 'guides/introducing-components'],
 		},
+		{
+			type: 'category',
+			label: 'API',
+			items: [
+				{
+					type: 'category',
+					label: 'Core',
+					items: [
+						'api/core/storyboard',
+						'api/core/diff-storyboard',
+						'api/core/component',
+						'api/core/sprite',
+						'api/core/animation',
+						'api/core/scene',
+						'api/core/sample',
+						'api/core/expressions',
+						'api/core/utils',
+						'api/core/enums',
+					],
+				},
+				{
+					type: 'category',
+					label: 'Beatmap',
+					items: ['api/beatmap/index', 'api/beatmap/hitobjects', 'api/beatmap/enums'],
+				},
+				{
+					type: 'category',
+					label: 'Pre-built components',
+					items: [
+						'api/components/bg',
+						'api/components/hitobjecthighlight',
+						'api/components/importosb',
+						'api/components/lyrics',
+						'api/components/removebg',
+						'api/components/particles',
+					],
+				},
+				'api/cli/index',
+				'api/txtgen/index',
+				{
+					type: 'category',
+					label: 'Math',
+					items: [
+						'api/math/helper',
+						'api/math/random',
+						'api/math/matrix3',
+						'api/math/matrix4',
+						'api/math/vector2',
+						'api/math/vector3',
+						'api/math/vector4',
+						'api/math/quaternion',
+					],
+				},
+			],
+		},
 	],
 }
 

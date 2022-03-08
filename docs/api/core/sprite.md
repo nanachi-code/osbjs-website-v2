@@ -11,11 +11,11 @@ const sprite = new Sprite(
 	initialPosition: OsbVector2 = new OsbVector2(320, 480)
 )
 ```
-Create a new sprite. A sprite is also a component, therefore you can register it to storyboard directly, or add it to another components.
+Create a new sprite. A sprite is a special component, therefore you can register it to storyboard directly, or add it to another components. However, you can not add another components to it.
 
 * **path**: path to the image file relative to the beatmap folder. For example, if you have a subfolder named `sb` inside your beatmap folder and your image file named `background.jpg` is in it then you must pass `sb/background.jpg` without the dot at the start.
-* **layer**: [Layer](/docs/osbjs-enums)
-* **origin**: [Origin](/docs/osbjs-enums)
+* **layer**: [Layer](/docs/api/core/enums#layer)
+* **origin**: [Origin](/docs/api/core/enums#origin)
 * **initialPosition**: the initial position of the image.
 
 ## Instance methods
@@ -25,13 +25,13 @@ sprite.Fade(startTime: number | string, endTime: number | string, startOpacity: 
 ```
 * **startTime**, **endTime**: times in milliseconds indicate when the event will occur
 * **startOpacity**, **endOpacity**: opacity at the start/end of the animation
-* **easing**: [Easing](/docs/osbjs-enums)
+* **easing**: [Easing](/docs/api/core/enums#easing)
 
 ### `FadeAtTime`
 ```typescript
 sprite.FadeAtTime(time: number | string, opacity: number)
 ```
-Shorthand command for [Fade](/docs/osbjs-enums) when `startTime` and `endTime` are equal.
+Shorthand command for [Fade](#fade) when `startTime` and `endTime` are equal.
 * **time**: time in milliseconds/timestamp indicates when the event will occur.
 * **opacity**: opacity at the given time.
 
@@ -41,13 +41,13 @@ sprite.Move(startTime: number | string, endTime: number | string, startPosition:
 ```
 * **startTime**, **endTime**: times in milliseconds indicate when the event will occur.
 * **startPosition**, **endPosition**: position at the start/end of the animation.
-* **easing**: [Easing](/docs/osbjs-enums)
+* **easing**: [Easing](/docs/api/core/enums#easing)
 
 ### `MoveAtTime`
 ```typescript
 sprite.MoveAtTime(time: number | string, position: OsbVector2)
 ```
-Shorthand command for [Move](#spritemove) when `startTime` and `endTime` are equal.
+Shorthand command for [Move](#move) when `startTime` and `endTime` are equal.
 * **time**: time in milliseconds/timestamp indicates when the event will occur.
 * **position**: position at the given time.
 
@@ -57,13 +57,13 @@ sprite.MoveX(startTime: number | string, endTime: number | string, startX: numbe
 ```
 * **startTime**, **endTime**: times in milliseconds indicate when the event will occur.
 * **startX**, **endX**: x position at the start/end of the animation.
-* **easing**: [Easing](/docs/osbjs-enums)
+* **easing**: [Easing](/docs/api/core/enums#easing)
 
 ### `MoveXAtTime`
 ```typescript
 sprite.MoveXAtTime(time: number | string, x: number)
 ```
-Shorthand command for `MoveX` when `startTime` and `endTime` are equal.
+Shorthand command for [MoveX](#movex) when `startTime` and `endTime` are equal.
 * **time**: time in milliseconds/timestamp indicates when the event will occur.
 * **x**: x position at the given time.
 
@@ -73,13 +73,13 @@ sprite.MoveY(startTime: number | string, endTime: number | string, startY: numbe
 ```
 * **startTime**, **endTime**: times in milliseconds indicate when the event will occur.
 * **startY**, **endY**: y position at the start/end of the animation.
-* **easing**: [Easing](/docs/osbjs-enums)
+* **easing**: [Easing](/docs/api/core/enums#easing)
 
 ### `MoveYAtTime`
 ```typescript
 sprite.MoveYAtTime(time: number | string, y: number)
 ```
-Shorthand command for `MoveY` when `startTime` and `endTime` are equal.
+Shorthand command for [MoveY](#movey) when `startTime` and `endTime` are equal.
 * **time**: time in milliseconds/timestamp indicates when the event will occur.
 * **y**: y position at the given time.
 
@@ -89,13 +89,13 @@ sprite.Scale(startTime: number | string, endTime: number | string, startScale: n
 ```
 * **startTime**, **endTime**: times in milliseconds indicate when the event will occur.
 * **startScale**, **endScale**: scale factor at the start/end of the animation.
-* **easing**: [Easing](/docs/osbjs-enums)
+* **easing**: [Easing](/docs/api/core/enums#easing)
 
 ### `ScaleAtTime`
 ```typescript
 sprite.ScaleAtTime(time: number | string, scale: number)
 ```
-Shorthand command for `Scale` when `startTime` and `endTime` are equal.
+Shorthand command for [Scale](#scale) when `startTime` and `endTime` are equal.
 * **time**: time in milliseconds/timestamp indicates when the event will occur.
 * **scale**: scale factor at the given time.
 
@@ -105,13 +105,13 @@ sprite.Scale(startTime: number | string, endTime: number | string, startScale: O
 ```
 * **startTime**, **endTime**: times in milliseconds indicate when the event will occur.
 * **startScale**, **endScale**: scale factor at the start/end of the animation.
-* **easing**: [Easing](/docs/osbjs-enums)
+* **easing**: [Easing](/docs/api/core/enums#easing)
 
 ### `ScaleVecAtTime`
 ```typescript
 sprite.ScaleAtTime(time: number | string, scale: OsbVector2)
 ```
-Shorthand command for `ScaleVec` when `startTime` and `endTime` are equal.
+Shorthand command for [ScaleVec](#scalevec) when `startTime` and `endTime` are equal.
 * **time**: time in milliseconds/timestamp indicates when the event will occur.
 * **scale**: scale factor at the given time.
 
@@ -121,13 +121,13 @@ sprite.Rotate(startTime: number | string, endTime: number | string, startAngle: 
 ```
 * **startTime**, **endTime**: times in milliseconds indicate when the event will occur.
 * **startAngle**, **endAngle**: angle to rotate by in radians at the start/end of the animation.
-* **easing**: [Easing](/docs/osbjs-enums)
+* **easing**: [Easing](/docs/api/core/enums#easing)
 
 ### `RotateAtTime`
 ```typescript
 sprite.RotateAtTime(time: number | string, angle: number)
 ```
-Shorthand command for `Rotate` when `startTime` and `endTime` are equal.
+Shorthand command for [Rotate](#rotate) when `startTime` and `endTime` are equal.
 * **time**: time in milliseconds/timestamp indicates when the event will occur.
 * **angle**: angle to rotate by in radians at the given time.
 
@@ -137,13 +137,13 @@ sprite.Color(startTime: number | string, endTime: number | string, startColor: O
 ```
 * **startTime**, **endTime**: times in milliseconds indicate when the event will occur.
 * **startColor**, **endColor**: color at the start/end of the animation. Sprites with (255,255,255) will be their original colour and sprites with (0,0,0) will be totally black. Anywhere in between will result in subtractive colouring.
-* **easing**: [Easing](/docs/osbjs-enums)
+* **easing**: [Easing](/docs/api/core/enums#easing)
 
 ### `ColorAtTime`
 ```typescript
 sprite.ColorAtTime(time: number | string, scale: OsbColor)
 ```
-Shorthand command for `Color` when `startTime` and `endTime` are equal.
+Shorthand command for [Color](#color) when `startTime` and `endTime` are equal.
 * **time**: time in milliseconds/timestamp indicates when the event will occur.
 * **color**: color at the given time. Sprites with (255,255,255) will be their original colour and sprites with (0,0,0) will be totally black. Anywhere in between will result in subtractive colouring.
 
@@ -152,15 +152,15 @@ Shorthand command for `Color` when `startTime` and `endTime` are equal.
 sprite.Parameter(startTime: number | string, endTime: number | string, parameter: Parameter)
 ```
 * **startTime**, **endTime**: times in milliseconds indicate when the event will occur.
-* **parameter**: [Parameter](#parameter)
+* **parameter**: [Parameter](/docs/api/core/enums#parameter)
 
 ### `ParameterAtTime`
 ```typescript
 sprite.ParameterAtTime(time: number | string, parameter: Parameter)
 ```
-Shorthand command for `Parameter` when `startTime` and `endTime` are equal.
+Shorthand command for [Parameter](#parameter) when `startTime` and `endTime` are equal.
 * **time**: time in milliseconds/timestamp indicates when the event will occur.
-* **parameter**: effect [Parameter](#parameter) to apply.
+* **parameter**: effect [Parameter](/docs/api/core/enums#parameter) to apply.
 
 ### `Loop`
 ```typescript
@@ -209,7 +209,7 @@ Trigger loops can be used to trigger animations based on play-time events. Altho
 Trigger loops are zero-based similar to normal loops. If two overlap, the first will be halted and replaced by a new loop from the beginning.
 If they overlap any existing storyboarded events, they will not trigger until those transformations are no in effect.
 
-* **triggerName**: [TriggerName](/docs/osbjs-enums) for more info, see https://osu.ppy.sh/wiki/en/Storyboard/Scripting/Compound_Commands
+* **triggerName**: [TriggerName](/docs/api/core/enums#triggername) for more info, see https://osu.ppy.sh/wiki/en/Storyboard/Scripting/Compound_Commands
 * **startTime**: when the trigger is valid.
 * **endTime**: when the trigger stops being valid.
 

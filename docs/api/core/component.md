@@ -22,7 +22,7 @@ Example:
 ```javascript
 const { Component, Sprite, Layer, OsbVector2 } = require('@osbjs/osbjs')
 
-module.exports = class Flash extends Component {
+class Flash extends Component {
 	constructor(startTime, endTime) {
 		this.startTime = startTime
 		this.endTime = endTime
@@ -35,4 +35,6 @@ module.exports = class Flash extends Component {
 		this.registerComponents(fl)
 	}
 }
+
+module.exports = { Flash }
 ```

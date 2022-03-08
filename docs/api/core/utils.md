@@ -59,6 +59,19 @@ OsbColor.fromHexString(color: string): OsbColor
 ```
 Create an OsbColor from a hex string
 
+#### `fromColor`
+```typescript
+OsbColor.fromColor(color: IColor): OsbColor
+```
+Create an OsbColor from any color object that contains r, g, b fields.
+
+```ts
+interface IColor {
+	r: number
+	g: number
+	b: number
+}
+```
 
 ## OsbVector2
 ```typescript
@@ -75,4 +88,4 @@ Only use with sprite/animation.
 ```typescript
 OsbVector2.fromVector2(v: Vector2): OsbVector2
 ```
-Create an OsbVector2 from a [Vector2](/docs/math-vector2). Helpful when u have a [Vector2](/docs/math-vector2) returned from a calcuation
+Create an OsbVector2 from a [Vector2](/docs/math-vector2). Helpful when u have a [Vector2](/docs/math-vector2) returned from a calculation

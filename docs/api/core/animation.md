@@ -15,14 +15,14 @@ const animation = new Animation(
 )
 ```
 
-Create a new animation. An animation is also a component, therefore you can register it to storyboard directly, or add it to another components.
+Create a new animation. An animation is also a special component, therefore you can register it to storyboard directly, or add it to another components. However, you can not add another components to it.
 
 * **path**: path to the image file relative to the beatmap folder. For example, specify a filename like "sliderball.png", and name your files "sliderball0.png" to "sliderball9.png" for a 10 frame animation.
 * **frameCount**: number of frames in the animation.
 * **frameDelay**: delay in milliseconds between each frame. 
-* **loopType**: [LoopType](/docs/osbjs-enums)
-* **layer**: [Layer](/docs/osbjs-enums)
-* **origin**: [Origin](/docs/osbjs-enums)
+* **loopType**: [LoopType](/docs/api/core/enums)
+* **layer**: [Layer](/docs/api/core/enums)
+* **origin**: [Origin](/docs/api/core/enums)
 * **initialPosition**: the initial position of the image.
 
-Animation has all of [Sprite](/docs/osbjs-sprite)'s methods.
+Animation has all of [Sprite](/docs/api/core/sprite)'s methods.
