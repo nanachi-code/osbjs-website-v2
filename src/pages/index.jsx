@@ -1,4 +1,3 @@
-import YouTube from 'react-youtube'
 import React from 'react'
 import Layout from '@theme/Layout'
 import CodeBlock from '@theme/CodeBlock'
@@ -64,7 +63,7 @@ export default function Home() {
 					<div className="mr-3 inline-block rounded border border-black bg-slate-100 p-3 font-mono dark:text-black">npm i @osbjs/osbjs</div>
 
 					<a href="/docs/introduction/installation">
-						<div className="hover:bg inline-block rounded border border-black bg-osbjs-bright p-3 text-white transition duration-200 hover:bg-osbjs">
+						<div className="hover:bg inline-block rounded border border-black bg-blue-600 p-3 text-white transition duration-200 hover:bg-blue-800">
 							Get started &gt;
 						</div>
 					</a>
@@ -115,70 +114,45 @@ export default function Home() {
 
 					<div className="grid gap-6 md:grid-cols-3">
 						<a
-							href="docs/cli"
+							href="docs/api/cli"
 							className="rounded border border-black p-3 transition duration-200 hover:bg-blue-100 dark:hover:bg-zinc-800"
 						>
 							<div className="font-bold">CLI</div>
 						</a>
 
 						<a
-							href="docs/beatmap"
+							href="docs/api/beatmap"
 							className="rounded border border-black p-3 transition duration-200 hover:bg-blue-100 dark:hover:bg-zinc-800"
 						>
 							<div className="font-bold">Beatmap parser</div>
 						</a>
 
 						<a
-							href="docs/math"
+							href="docs/api/math/helpers"
 							className="rounded border border-black p-3 transition duration-200 hover:bg-blue-100 dark:hover:bg-zinc-800"
 						>
 							<div className="font-bold">Math library</div>
 						</a>
 
 						<a
-							href="docs/txtgen"
+							href="docs/api/txtgen"
 							className="rounded border border-black p-3 transition duration-200 hover:bg-blue-100 dark:hover:bg-zinc-800"
 						>
 							<div className="font-bold">Texture generator</div>
 						</a>
 
 						<a
-							href="docs/math"
+							href="docs/api/components/background"
 							className="rounded border border-black p-3 transition duration-200 hover:bg-blue-100 dark:hover:bg-zinc-800"
 						>
 							<div className="font-bold">Pre-built components</div>
 						</a>
 
 						<a
-							href="docs/typescript"
+							href="docs/introduction/typescript"
 							className="rounded border border-black p-3 transition duration-200 hover:bg-blue-100 dark:hover:bg-zinc-800"
 						>
 							<div className="font-bold">TypeScript support</div>
-						</a>
-					</div>
-				</section>
-
-				{/* Showcase */}
-				<section className="mx-auto mb-40 w-full max-w-screen-xl md:mb-48">
-					<div className="mb-6 md:mb-20 md:text-center">
-						<h2 className="text-3xl font-bold md:text-5xl">Showcase</h2>
-						<p className="mt-3 md:mt-6 md:text-lg">Storyboards that were made using osbjs</p>
-					</div>
-
-					<div className="text-center">
-						<YouTube videoId="o3HZRwHTgYg" className="m-auto mb-6 block h-[180px] w-[320px] md:h-[360px] md:w-[640px]" />
-						<p>
-							Storyboard by <span>Smug Nanachi</span>
-						</p>
-						<a
-							href="https://github.com/nanachi-code/phai-chang-em-da-yeu"
-							className="mr-2 text-sm transition duration-200 hover:text-osbjs"
-						>
-							Source code
-						</a>
-
-						<a href="https://osu.ppy.sh/beatmapsets/1526749#osu/3123402" className="text-sm transition duration-200 hover:text-osbjs">
-							Map
 						</a>
 					</div>
 				</section>

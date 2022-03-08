@@ -15,6 +15,7 @@ const config = {
 	favicon: 'img/favicon.ico',
 	organizationName: 'osbjs', // Usually your GitHub org/user name.
 	projectName: 'osbjs-website-v2', // Usually your repo name.
+	staticDirectories: ['public', 'static'],
 
 	presets: [
 		[
@@ -50,11 +51,6 @@ const config = {
 						docId: 'introduction/installation',
 						position: 'left',
 						label: 'Documentation',
-					},
-					{
-						to: '/learn',
-						label: 'Learn',
-						position: 'left',
 					},
 					{
 						to: '/showcase',
