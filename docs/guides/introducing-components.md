@@ -7,7 +7,7 @@ name: Introducing components
 ## What is it?
 Let say you are building a really big storyboard project with tons of effects like lyrics, hit object highlights, background changes etc..., if you only write it all in index.js file, you will have a really hard time managing or debug if something breaks. Components let you split the code into multiple independent and reusable pieces, and make your life much more easier. They are extremely helpful when it comes to creating and managing complicated effects with a lot of sprites, or even groups of effects, if you want.
 
-To create a new component, just extends [`Component`](/docs/core/component) class
+To create a new component, just extends [`Component`](/docs/api/core/component) class
 
 ## Example
 Let's build a component that adds some stars to the screen.

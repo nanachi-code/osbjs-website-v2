@@ -88,4 +88,4 @@ Only use with sprite/animation.
 ```typescript
 OsbVector2.fromVector2(v: Vector2): OsbVector2
 ```
-Create an OsbVector2 from a [Vector2](/docs/math-vector2). Helpful when u have a [Vector2](/docs/math-vector2) returned from a calculation
+Create an OsbVector2 from a [Vector2](/docs/api/math/vector2). Helpful when u have a [Vector2](/docs/api/math/vector2) returned from a calculation
