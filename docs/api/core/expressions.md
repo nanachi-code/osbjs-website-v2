@@ -118,3 +118,19 @@ Randomly "wiggle" between 2 colors.
 * **endTime**: end time of the expression
 * **color1**, **color2**: "Maximum" and "minimum" colors value. The sprite's r, g, b values cannot go further than these 2's.
 
+## scaleExact
+```ts
+function scaleExact(
+	commandable: Commandable,
+	width: number, 
+	height: number, 
+	time: number, 
+	path: string
+)
+```
+Scale any image to any desired resolution without knowing the original resolution.
+* **commandable**: [`Sprite`](/docs/api/core/sprite)/[`Animation`](/docs/api/core/animation)
+* **width**: output width
+* **height**: output height
+* **time**: time to apply the expression
+* **path**: full path to image file
