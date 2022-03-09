@@ -13,7 +13,7 @@ const particles = new Particles(
 )
 ```
 
-Particle
+Create a particle scene
 
 * **path**: relative path to image file. For example, if you have a folder named `sb` inside your beatmap folder and your sprite named `image.jpg` is in it, then it should be `sb/image.jpg`
 * **startTime**/**endTime**: times in milliseconds/timestamp indicate when the image will be shown.

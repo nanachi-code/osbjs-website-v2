@@ -34,10 +34,10 @@ interface IColor { r: number, g: number, b: number }
 * **offset**:
 ```typescript
 interface IOffsetOptions {
-	left: number
-	right: number
-	top: number
-	bottom: number
+	left?: number // default: 0
+	right?: number // default: 0
+	top?: number // default: 0
+	bottom?: number // default: 0
 }
 ```
 
