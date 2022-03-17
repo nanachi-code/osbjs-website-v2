@@ -21,25 +21,43 @@ interface IFontProperties {
 ## Instance methods
 ### `generateTexture`
 ```typescript
-txtGen.generateTexture(text: string, color?: IColor, offset?: IOffsetOptions) : Texture
+txtGen.generateTexture(
+	text: string, 
+	color?: { 
+		r: number, 
+		g: number, 
+		b: number
+	}, 
+	offset?: {
+		left?: number
+		right?: number
+		top?: number
+		bottom?: number
+	}
+) : Texture
 ```
 Generate and save text image. Offset will be 0 on each side if not set. 
 Returns a `Texture` that contains info about the width, height and osb path of the generated image.
 
 * **text**: Text.
-* **color**: 
+* **color**: default: 0,0,0
+* **offset**: default: 0,0,0,0
+
+### `getTextDimensions`
 ```typescript
-interface IColor { r: number, g: number, b: number }
+txtGen.getTextDimensions(
+	text: string,
+	offset?: {
+		left?: number
+		right?: number
+		top?: number
+		bottom?: number
+	}
+) : { width: number, height: number }
 ```
-* **offset**:
-```typescript
-interface IOffsetOptions {
-	left?: number // default: 0
-	right?: number // default: 0
-	top?: number // default: 0
-	bottom?: number // default: 0
-}
-```
+Return text dimensions without caching it.
+* **text**: Text.
+* **offset**: default: 0,0,0,0
 
 ### `emptyDir`
 ```typescript
