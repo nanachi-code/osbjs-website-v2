@@ -22,7 +22,8 @@ interface IFontProperties {
 ### `generateTexture`
 ```typescript
 txtGen.generateTexture(
-	text: string, 
+	text: string,
+	useBoundingBox: boolean = false,
 	color?: { 
 		r: number, 
 		g: number, 
@@ -40,6 +41,7 @@ Generate and save text image. Offset will be 0 on each side if not set.
 Returns a `Texture` that contains info about the width, height and osb path of the generated image.
 
 * **text**: Text.
+* **useBoundingBox**: Whether bounding box should be included in the calculation or not. If you are creating any sorts of per character effect this should be `true` and the Origin should be set to TopLeft, TopCenter or TopRight depends on your need so that the text can be aligned properly. However if you just wanna generate a whole line of text then just leave it as `false` so your texture doesn't have extra unncessary paddings.
 * **color**: default: 0,0,0
 * **offset**: default: 0,0,0,0
 
@@ -90,7 +92,7 @@ let line = {
 
 let texture = txtGen.generateTexture(line.text)
 
-let sprite = new Sprite(texture.osbPath, Layer.Background, Origin.Center, {
+let sprite = texture.toSprite(texture.osbPath, Layer.Background, Origin.Center, {
 	x: 320,
 	y: 400,
 })
