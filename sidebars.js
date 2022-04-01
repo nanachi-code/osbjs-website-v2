@@ -68,6 +68,7 @@ const sidebars = {
 					label: 'Math',
 					items: [
 						'api/math/helper',
+						'api/math/easing',
 						'api/math/random',
 						'api/math/matrix3',
 						'api/math/matrix4',

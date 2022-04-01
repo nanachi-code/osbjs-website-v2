@@ -26,3 +26,12 @@ Clamps the value to be between min and max.
 lerp(x: number, xMin: number, xMax: number, yMin: number, yMax: number): number
 ```
 Linear interpolation.
+
+### `getImageDimensions`
+```typescript
+getImageDimensions(path: string): {
+    width: number | undefined;
+    height: number | undefined;
+}
+```
+Returns the width and height of an image.
