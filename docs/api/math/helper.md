@@ -27,6 +27,12 @@ lerp(x: number, xMin: number, xMax: number, yMin: number, yMax: number): number
 ```
 Linear interpolation.
 
+### `interpolate`
+```typescript
+interpolate(x: number, xMin: number, xMax: number, yMin: number, yMax: number): number
+```
+Linear interpolation.
+
 ### `getImageDimensions`
 ```typescript
 getImageDimensions(path: string): {
@@ -35,3 +41,15 @@ getImageDimensions(path: string): {
 }
 ```
 Returns the width and height of an image.
+
+### `normalize`
+```typescript
+normalize(x: number, max: number, min: number): number
+```
+Normalizes the value to be between 0 and 1.
+
+### `precise`
+```typescript
+precise(x: number, precision: number = 5): number
+```
+Rounds the number to the specified precision.

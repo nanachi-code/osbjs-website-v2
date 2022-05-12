@@ -10,7 +10,7 @@ new SubtitleCollection(path: string)
 ```
 Convert lyrics file into a time-text collection
 
-* **path**: full path to lyrics file. File types supported: `srt`, `vtt`
+* **path**: full path to lyrics file. File types supported: `srt`, `vtt`, `json` with 3 contains an array of objects containing these 3 keys: `startTime`, `endTime`, `text`
 
 Property:
 * **subtitles**: `ISubtitle`[]
