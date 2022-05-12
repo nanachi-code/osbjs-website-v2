@@ -4,13 +4,12 @@ name: Installation
 
 # Installation
 ## CLI (Recommended)
-
 A recommended way to setup your project is to use the cli, which sets up everything automatically for you.
 ```bash
 npx @osbjs/osbjs create-storyboard
 ```
 
-If you want to use typescript:
+If you want to use TypeScript:
 ```bash
 npx @osbjs/osbjs create-storyboard -t ts
 ```
