@@ -3,14 +3,16 @@ name: Installation
 ---
 
 # Installation
-
->*Note*: `osbjs` uses `node-canvas` for generating image so make sure you have `node-gyp` installed. Read [this section](https://github.com/nodejs/node-gyp#installation) for more info on how to install `node-gyp` for your operating system.
-
 ## CLI (Recommended)
 
 A recommended way to setup your project is to use the cli, which sets up everything automatically for you.
 ```bash
 npx @osbjs/osbjs create-storyboard
+```
+
+If you want to use typescript:
+```bash
+npx @osbjs/osbjs create-storyboard -t ts
 ```
 
 After the installation is complete:
@@ -31,7 +33,6 @@ Open package.json and add the following script:
 ```
 Create a new `index.js` file and start editing. Run `npm run build` to generate storyboard after you finish.
 
-## Hot reload
 If you want to update your storyboard everytime you make changes to your code, `nodemon` is perfect for that.
 ```bash
 npm i -D nodemon
