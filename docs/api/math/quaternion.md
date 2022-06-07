@@ -29,7 +29,7 @@ Returns a new Quaternion with identical x, y, z and w properties to this one.
 ```typescript
 quat.equals(q: Quaternion): boolean
 ```
-Compares the x, y, z and w properties of v to the equivalent properties of this quaternion to determine if they represent the same rotation.
+Compares the x, y, z and w properties of q to the equivalent properties of this quaternion to determine if they represent the same rotation.
 
 ### `length`
 ```typescript
@@ -43,7 +43,7 @@ quat.lengthSqr(): number
 ```
 Computes the squared Euclidean length (straight-line length) of this quaternion, considered as a 4 dimensional vector.
 
-### `distance`
+### `angleTo`
 ```typescript
 quat.angleTo(q: Quaternion): number
 ```

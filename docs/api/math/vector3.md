@@ -57,7 +57,7 @@ vec3.distanceToSqr(v: Vector3): number
 ```
 Computes the Euclidean distance squared between the two given points.
 
-### `angle`
+### `angleTo`
 ```typescript
 vec3.angleTo(v: Vector3): number
 ```
