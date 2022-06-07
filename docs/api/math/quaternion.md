@@ -136,3 +136,9 @@ Concatenates two quaternions.
 Quaternion.negate(q: Quaternion): Quaternion
 ```
 Reverses the sign of each component of the quaternion.
+
+### `dot`
+```typescript
+Quaternion.dot(q1: Quaternion, q2: Quaternion): Quaternion
+```
+Returns dot product of 2 quaternions.
