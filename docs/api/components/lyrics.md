@@ -72,7 +72,7 @@ interface ILyricsOptions {
 
 * **registerFontOptions**: in case you want to use a non-system font.
 ```typescript
-interface FontOptions {
+interface IFontOptions {
 	fontPath: string // full path to font file
 	family: string // font family name
 }
