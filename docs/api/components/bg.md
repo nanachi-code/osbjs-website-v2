@@ -20,8 +20,21 @@ Set background between start and end time.
 * **osbPath**: relative path to image file. For example, if you have a folder named `sb` inside your beatmap folder and your `image.jpg` is in it, then it should be `sb/image.jpg`
 * **folderPath**: full path to beatmap folder
 * **startTime**/**endTime**: times in milliseconds/timestamp indicate when the image will be shown.
-* **opacity**: opacity of the image
-* **fadeDuration**: how long (in milliseconds) should the image start fading in/out
+* **options**: Available options:
+```typescript
+interface IBackgroundOptions {
+	/**
+	 * Opacity of the image
+	 * @default 0.8
+	 */
+	opacity?: number
+	/**
+	 * How long (in milliseconds) should the image start fading in/out.
+	 * @default 500
+	 */
+	fadeDuration?: number
+}
+```
 
 ## Example
 ```javascript

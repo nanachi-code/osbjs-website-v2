@@ -8,8 +8,8 @@ const highlight = new HitObjectHighlight(
 	osbPath: string,
 	startTime: number | string,
 	endTime: number | string,
-	beatmap: Beatmap, // from osujs
-	options?: HitObjectHighlightOptions
+	beatmap: Beatmap,
+	options?: IHitObjectHighlightOptions
 )
 ```
 
@@ -20,13 +20,35 @@ Highlight every objects inbetween start and end time.
 * **beatmap**: Beatmap instance of difficulty you want to use
 * **options**: Avaiable options:
 ```typescript
-interface HitObjectHighlightOptions {
-	endScale: number // default: 1
-	startScale: number // default: 1.2
-	fadeDuration: number // default: 200
-	beatDivisor: number // the higher the more precise. default: 8
-	followSliderPath: boolean // default: true
+interface IHitObjectHighlightOptions {
+	/**
+	 * Scale factor of the sprite at the end of each slider highlight animation.
+	 * @default 1.2
+	 */
+	endScale?: number
+	/**
+	 * Scale factor of the sprite at the start of each slider highlight animation.
+	 * @default 1
+	 */
+	startScale?: number
+	/**
+	 * How long (in milliseconds) should the highlight sprite start fading in/out.
+	 * @default 200
+	 */
+	fadeDuration?: number
+	/**
+	 * Used to calculate the timestep between each `Move` command.
+	 * The higher the number, the more smooth the animation will be.
+	 * @default 8
+	 */
+	beatDivisor?: number
+	/**
+	 * Should the highlight follow the slider path?
+	 * @default true
+	 */
+	followSliderPath?: boolean
 }
+
 ```
 
 ## Example
